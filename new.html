@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Parallax Sections</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #111;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    section {
+      position: relative;
+      height: 300vh; /* each section scrolls over 3x viewport */
+    }
+
+    .sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background: #191919;
+      transition: background 0.3s;
+    }
+
+    h1 {
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.9;
+      transition: transform 0.2s ease-out;
+    }
+
+    p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      opacity: 0.8;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    /* Each section gets a slightly different tone */
+    #hero .sticky { background: #202020; }
+    #about .sticky { background: #252525; }
+    #texture .sticky { background: #2a2a2a; }
+  </style>
+</head>
+<body>
+
+  <section id="hero">
+    <div class="sticky">
+      <h1>Hero Section</h1>
+      <p>Welcome to our showcase. Scroll down to see the story unfold with depth and motion.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="sticky">
+      <h1>About Section</h1>
+      <p>We create digital experiences that move with purpose, blending design, technology, and emotion.</p>
+    </div>
+  </section>
+
+  <section id="texture">
+    <div class="sticky">
+      <h1>Texture Section</h1>
+      <p>Every scroll reveals new detail. Simplicity, motion, and precision—crafted for engagement.</p>
+    </div>
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      const windowH = window.innerHeight;
+
+      sections.forEach((sec) => {
+        const sticky = sec.querySelector(".sticky");
+        const offsetTop = sec.offsetTop;
+        const progress = (scrollY - offsetTop) / (windowH * 2);
+
+        // Text parallax movement while section is sticky
+        const title = sticky.querySelector("h1");
+        const para = sticky.querySelector("p");
+
+        if (progress >= 0 && progress <= 1) {
+          title.style.transform = `translateY(${progress * -100}px) scale(${1 - progress * 0.1})`;
+          para.style.transform = `translateY(${progress * 80}px)`;
+          title.style.opacity = `${1 - progress * 0.6}`;
+          para.style.opacity = `${1 - progress * 0.4}`;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
