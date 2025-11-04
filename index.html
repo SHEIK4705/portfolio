@@ -440,7 +440,7 @@
       </a>
 
       <a
-        href="https://www.linkedin.com/in/sheik-mohammed-arif-3b3036327"
+        href="https://www.linkedin.com/in/sheik-mohammed-arif-a-3b3036327"
         target="_blank"
         class="icon-item"
       >
@@ -515,7 +515,7 @@
           <div class="flex flex-col md:flex-row gap-4">
             <a
               href="#projects"
-              class="sws-btn-main px-8 py-3 rounded-full text-white font-semibold shadow-lg"
+              class="sws-btn-main px-8 py-3 w-fit rounded-full text-white font-semibold shadow-lg"
               data-aos="fade-right"
               data-aos-delay="300"
             >
@@ -523,7 +523,7 @@
             </a>
             <a
               href="#contact"
-              class="sws-btn-alt px-8 py-3 rounded-full font-semibold shadow-lg border border-indigo-100"
+              class="sws-btn-alt px-8 py-3 w-fit rounded-full font-semibold shadow-lg border border-indigo-100"
               data-aos="fade-left"
               data-aos-delay="400"
             >
@@ -1130,7 +1130,7 @@
             <h3 class="text-lg font-bold text-gray-800 mb-2">Student help</h3>
             <p class="text-gray-600 mb-4 text-sm">
               UI setup for mini/final year projects with documentation and
-              guidance. (Web based)
+              guidance. (Especially Web based)
             </p>
             <span
               class="inline-block px-4 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-semibold"
@@ -1483,36 +1483,84 @@
         <div class="grid md:grid-cols-2 gap-8">
           <!-- Contact Form -->
           <form
-            action="https://formspree.io/f/your-form-id"
+            action="https://formspree.io/f/mblpvbwa"
             method="POST"
-            class="bg-white rounded-2xl shadow-lg p-8 space-y-6"
+            class="bg-white rounded-2xl shadow-lg p-8 space-y-4"
             data-aos="fade-right"
           >
-            <label class="block font-semibold text-lg text-gray-800 mb-2"
+            <!-- name -->
+            <label
+              for="name"
+              class="block font-semibold text-lg text-gray-800 mb-1"
               >Your Name</label
             >
             <input
               type="text"
               name="name"
               required
+              id="name"
               class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 mb-4"
+              placeholder="*Enter your name"
             />
-            <label class="block font-semibold text-lg text-gray-800 mb-2"
+            <!-- email -->
+            <label
+              for="mail"
+              class="block font-semibold text-lg text-gray-800 mb-1"
               >Your Email</label
             >
             <input
+              id="mail"
               type="email"
               name="email"
               required
               class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 mb-4"
+              placeholder="*Enter your email"
             />
-            <label class="block font-semibold text-lg text-gray-800 mb-2"
+            <!-- phone number -->
+            <label
+              for="phone"
+              class="block font-semibold text-lg text-gray-800 mb-1"
+              >Your Mobile Number</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[5-9]{10}"
+              placeholder="10-digit valid mobile number"
+              class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 mb-4"
+            />
+            <!-- preferred contact time -->
+            <label
+              for="contact_time"
+              class="block font-semibold text-lg text-gray-800 mb-1"
+              >Preferred Contact Time</label
+            >
+            <select
+              id="contact_time"
+              name="contact_time"
+              class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 mb-4"
+              required
+            >
+              <option value="" disabled selected>Select an option</option>
+              <option value="anytime">Anytime</option>
+              <option value="morning">Morning</option>
+              <option value="afternoon">Afternoon</option>
+              <option value="evening">Evening</option>
+              <option value="late evening">Late Evening</option>
+            </select>
+            <!-- message -->
+            <label
+              for="message"
+              class="block font-semibold text-lg text-gray-800 mb-1"
               >Your Message</label
             >
             <textarea
+              id="message"
               name="message"
               rows="5"
               required
+              placeholder="*Enter your queries or message here..."
               class="w-full max-h-40 h-24 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 mb-4"
             ></textarea>
             <button
@@ -1581,11 +1629,22 @@
                 </div>
               </div>
             </div>
+            <!-- embed a map loacate in tenkasi, tamilnadu -->
+            <div class="h-64 rounded-lg overflow-hidden mb-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.2025562636346!2d77.3153483146222!3d8.964203493152634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05c6ca6f5f4d7b%3A0x8e8f8e8f8e8f8e8f!2sTenkasi%2C%20Tamil%20Nadu%20627623%2C%20India!5e0!3m2!1sen!2sus!4v1625241234567!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
             <div>
               <div class="font-semibold text-gray-800 mb-2">Follow Me</div>
               <div class="flex space-x-3">
                 <a
-                  href="https://www.linkedin.com/in/sheik-mohammed-arif-3b3036327"
+                  href="https://www.linkedin.com/in/sheik-mohammed-arif-a-3b3036327"
                   target="_blank"
                   class="bg-indigo-100 text-indigo-600 rounded-full p-3 hover:bg-indigo-200 transition"
                   ><i class="fab fa-linkedin-in"></i
@@ -1634,7 +1693,7 @@
           </div>
           <div class="flex space-x-4">
             <a
-              href="https://www.linkedin.com/in/sheik-mohammed-arif-3b3036327"
+              href="https://www.linkedin.com/in/sheik-mohammed-arif-a-3b3036327"
               class="hover:text-blue-400 transition"
               ><i class="fab fa-linkedin-in"></i
             ></a>
