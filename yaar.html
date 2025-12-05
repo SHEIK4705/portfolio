@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YAAR – Project Showcase | Sheik Mohammed Arif</title>
+
+    <!-- Tailwind (same version as your template) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .sticky-btns {
+        z-index: 50;
+      }
+      .project-badge {
+        font-size: 0.85rem;
+      }
+      .project-section h3 {
+        font-size: 1.25rem;
+      }
+      .project-section ul {
+        list-style: disc;
+        margin-left: 1.5rem;
+      }
+      .back-btn {
+        transition: background 0.2s, color 0.2s;
+      }
+      .back-btn:hover {
+        background: #e0e7ff;
+        color: #3730a3;
+      }
+
+      /* subtle card style */
+      .info-card {
+        border: 1px solid rgba(99, 102, 241, 0.08);
+        background: white;
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 0 8px 30px rgba(2, 6, 23, 0.04);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Back Button -->
+    <a
+      onclick="window.history.back()"
+      class="fixed cursor-pointer top-5 left-5 bg-white shadow-lg rounded-full px-4 py-2 flex items-center gap-2 text-indigo-700 font-semibold back-btn sticky-btns"
+      title="Go back"
+    >
+      <i class="fas fa-arrow-left"></i> Back
+    </a>
+
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-[320px] md:min-h-[420px] flex items-center justify-center bg-gradient-to-br from-indigo-900 via-indigo-700 to-blue-600 overflow-hidden"
+    >
+      <div
+        class="relative z-10 text-center max-w-2xl mx-auto px-4 py-20"
+        data-aos="fade-up"
+      >
+        <span
+          class="inline-block bg-indigo-100 text-indigo-700 px-4 py-1 rounded-full font-semibold mb-4 project-badge"
+          >Community & Entrepreneurship</span
+        >
+        <h1
+          class="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg"
+        >
+          YAAR — Empowering Entrepreneurs & SHGs
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 my-4 font-medium mb-6">
+          A responsive static website to showcase YAAR’s programs: entrepreneur
+          training, SHG marketplace, MSME courses and robotics kits — designed
+          to boost visibility and participation.
+        </p>
+        <div class="flex items-center justify-center gap-3">
+          <a
+            href="https://yaar.co.in"
+            target="_blank"
+            class="px-6 py-3 rounded-full bg-white text-indigo-700 font-semibold shadow hover:shadow-lg transition"
+            >Preview: yaar.co.in</a
+          >
+          <a
+            href="https://wa.me/917904889179?text=Hi%20Sheik,%20I%20want%20to%20know%20more%20about%20YAAR"
+            target="_blank"
+            class="px-6 py-3 rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold shadow hover:shadow-lg transition"
+            ><i class="fab fa-whatsapp mr-2"></i>Contact</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Details -->
+    <section
+      class="project-section max-w-6xl mx-auto my-6 p-6 bg-white rounded-2xl shadow-lg mt-16 relative z-20"
+    >
+      <!-- Abstract -->
+      <div class="mb-8" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Project Abstract</h2>
+        <p class="text-gray-700 leading-relaxed">
+          YAAR is a static website built to amplify the impact of a community
+          organisation that supports entrepreneurs, students, self-help groups
+          (SHGs), MSMEs, and tribal artisans. The website is intentionally
+          lightweight and fast, using <b>HTML, CSS, JavaScript</b> and
+          <b>Tailwind CSS</b> for a responsive, accessible UI. Key goals were to
+          present programs clearly, promote SHG products, provide training
+          details, and showcase robotics kits — all while keeping maintenance
+          simple for the client. The site is designed to be easy to host on
+          static hosts (Netlify/Vercel/GitHub Pages), and to be editable by
+          non-technical staff via clear file structure and content blocks.
+        </p>
+      </div>
+
+      <!-- Objectives -->
+      <div class="mb-8" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          Project Objectives
+        </h2>
+        <ul class="text-gray-700 list-disc pl-5 space-y-2">
+          <li>
+            Deliver a modern, mobile-first static website for YAAR using HTML,
+            CSS, JS and Tailwind CSS.
+          </li>
+          <li>
+            Make programs and services (Entrepreneur Development, MSME Training,
+            Robotics Kits, SHG Marketplace) easy to find and understand.
+          </li>
+          <li>
+            Showcase impact metrics and testimonials to build trust with
+            stakeholders and funders.
+          </li>
+          <li>
+            Provide simple seller profiles and product pages to support SHG
+            product promotion.
+          </li>
+          <li>
+            Include clear CTAs for applications, partnerships, and contact so
+            visitors convert into participants.
+          </li>
+          <li>
+            Ensure the site is fast, SEO-friendly, and easy to update without a
+            complex backend.
+          </li>
+          <li>
+            Prepare a foundation for future upgrades (CMS, payments,
+            multilingual support).
+          </li>
+        </ul>
+      </div>
+
+      <!-- Key Features -->
+      <div class="mb-8" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Features</h2>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <div class="info-card hover:shadow-lg transition">
+            <h3 class="font-semibold text-gray-800">Home Page</h3>
+            <p class="text-sm text-gray-600 mt-2">
+              Mission statement, rotating banner for promotions (e.g., new
+              robotics kits), quick links to programs, animated impact counters,
+              testimonials, and prominent CTAs.
+            </p>
+          </div>
+
+          <div class="info-card hover:shadow-lg transition">
+            <h3 class="font-semibold text-gray-800">
+              Entrepreneur Development
+            </h3>
+            <p class="text-sm text-gray-600 mt-2">
+              Program pages for Business Model Canvas, Financial Literacy, and
+              Marketing — resource hub with PDFs and videos, application form
+              for incubation/mentorship.
+            </p>
+          </div>
+
+          <div class="info-card hover:shadow-lg transition">
+            <h3 class="font-semibold text-gray-800">SHG Product Marketplace</h3>
+            <p class="text-sm text-gray-600 mt-2">
+              Category-based product listings (Handicrafts, Pickles, Herbal
+              Products, Apparel), seller profiles, product badges for
+              authenticity, and a simple inquiry/checkout flow suitable for a
+              static site.
+            </p>
+          </div>
+
+          <div class="info-card hover:shadow-lg transition">
+            <h3 class="font-semibold text-gray-800">
+              MSME Training & Robotics Kits
+            </h3>
+            <p class="text-sm text-gray-600 mt-2">
+              Certified course listings, calendar and registration links;
+              robotics kit catalog and video tutorials with a "Build Your Kit"
+              wizard idea (static wizard simulated).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technologies Used -->
+      <div class="mb-8" data-aos="fade-up">
+        <h3 class="font-bold text-gray-800 mb-2">Technologies Used</h3>
+        <div class="flex flex-wrap gap-3">
+          <span
+            class="bg-green-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium pointer hover:shadow-lg transition"
+            >HTML5</span
+          >
+          <span
+            class="bg-green-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium pointer hover:shadow-lg transition"
+            >CSS3</span
+          >
+          <span
+            class="bg-green-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium pointer hover:shadow-lg transition"
+            >JavaScript</span
+          >
+          <span
+            class="bg-green-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium pointer hover:shadow-lg transition"
+            >Tailwind CSS</span
+          >
+          <span
+            class="bg-green-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium pointer hover:shadow-lg transition"
+            >Swiper.js</span
+          >
+          <span
+            class="bg-green-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium pointer hover:shadow-lg transition"
+            >Vanilla.js</span
+          >
+          <span
+            class="bg-green-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium pointer hover:shadow-lg transition"
+            >AOS (Scroll Animations)</span
+          >
+          <span
+            class="bg-green-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium pointer hover:shadow-lg transition"
+            >Figma (design)</span
+          >
+        </div>
+      </div>
+
+      <!-- Planned Enhancements -->
+      <div class="mb-8" data-aos="fade-up">
+        <h3 class="font-bold text-gray-800 mb-2">Planned Enhancements</h3>
+        <ul class="text-gray-700 space-y-2">
+          <li>
+            Simple CMS integration to allow non-technical staff to update pages
+            (e.g., Netlify CMS or Forestry).
+          </li>
+          <li>
+            Payment gateway & order management for SHG marketplace (upgrade to
+            dynamic backend).
+          </li>
+          <li>Multilingual support (Tamil + English) for wider local reach.</li>
+          <li>
+            Admin dashboard for product & course management (future MERN or
+            Next.js upgrade).
+          </li>
+          <li>
+            Lightweight analytics tracking and SEO improvements for local
+            discovery.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sticky Buttons -->
+    <div
+      class="sticky text-xs md:text-lg bottom-6 mx-auto transform flex flex-row gap-4 z-40 fixed right-6"
+      style="bottom: 20px"
+    >
+      <a
+        href="https://yaar.co.in"
+        target="_blank"
+        class="px-6 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold shadow-lg hover:scale-105 transition flex items-center gap-2"
+        title="Open the YAAR preview"
+        ><i class="fas fa-eye"></i> Preview</a
+      >
+      <a
+        href="https://wa.me/917904889179?text=Hi%20Sheik,%20I%20want%20to%20know%20more%20about%20YAAR"
+        target="_blank"
+        class="px-6 py-3 rounded-full bg-white text-indigo-700 font-semibold shadow-lg hover:scale-105 transition flex items-center gap-2"
+        ><i class="fab fa-whatsapp"></i> Contact</a
+      >
+    </div>
+
+    <!-- Footer -->
+    <footer class="mx-auto px-4 bg-gray-900 text-gray-200 py-8 mt-12">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-6 md:mb-0">
+            <h2 class="text-2xl font-bold">Sheik Mohammed Arif</h2>
+            <p class="text-gray-400 mt-2">
+              Web solutions & static site builds for community projects
+            </p>
+          </div>
+          <div class="flex space-x-4 items-center">
+            <a href="#" class="hover:text-blue-400 transition"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" class="hover:text-pink-400 transition"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-blue-600 transition"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="hover:text-gray-100 transition"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+
+        <hr class="border-gray-800 my-8" />
+
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © <span id="year"></span> YAAR • Website by Sheik Mohammed Arif. All
+            rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white text-sm transition-colors"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white text-sm transition-colors"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

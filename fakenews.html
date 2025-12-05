@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TruthLens – Project Showcase | Sheik Mohammed Arif</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .sticky-btns {
+        z-index: 50;
+      }
+      .project-badge {
+        font-size: 0.85rem;
+      }
+      .project-section h3 {
+        font-size: 1.25rem;
+      }
+      .project-section ul {
+        list-style: disc;
+        margin-left: 1.5rem;
+      }
+      .back-btn {
+        transition: background 0.2s, color 0.2s;
+      }
+      .back-btn:hover {
+        background: #e0e7ff;
+        color: #3730a3;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Back Button -->
+    <a
+      onclick="window.history.back()"
+      class="fixed cursor-pointer top-5 left-5 bg-white shadow-lg rounded-full px-4 py-2 flex items-center gap-2 text-indigo-700 font-semibold back-btn sticky-btns"
+    >
+      <i class="fas fa-arrow-left"></i> Back
+    </a>
+
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-[350px] md:min-h-[420px] flex items-center justify-center bg-gradient-to-br from-indigo-900 via-indigo-700 to-blue-600 overflow-hidden"
+    >
+      <!-- <img src="/images/noteMate_bg.png" alt="NoteMate Project" class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none" /> -->
+
+      <div
+        class="relative z-10 text-center max-w-2xl mx-auto px-4 py-20"
+        data-aos="fade-up"
+      >
+        <span
+          class="inline-block bg-indigo-100 text-indigo-700 px-4 py-1 rounded-full font-semibold mb-4 project-badge"
+          >ML based platform</span
+        >
+        <h1
+          class="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg"
+        >
+          TruthLens
+        </h1>
+        <p class="text-lg md:text-xl text-indigo-100 font-medium mb-6">
+          An end-to-end misinformation detection and verification system
+          designed for short-form news text, combining ML classifiers with
+          fact-checking APIs.
+        </p>
+      </div>
+    </section>
+
+    <!-- Project Details -->
+    <section
+      class="project-section max-w-6xl mx-auto my-4 p-4 bg-white rounded-2xl shadow-lg mt-[-60px] relative z-20"
+    >
+      <div class="mb-8" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Project Abstract</h2>
+        <p class="text-gray-700 leading-relaxed">
+          <b>TruthLens</b> is an end-to-end misinformation detection and
+          verification system designed for short-form news text. It combines a
+          lightweight, interpretable machine-learning classifier—built using
+          TF-IDF word and character n-grams, numeric text features, and optional
+          sentence embeddings—with a Logistic Regression decision layer for
+          fast, explainable predictions. To increase reliability beyond
+          traditional ML models, TruthLens integrates a fact-checking module
+          that queries the Google Fact Check Tools API and automatically falls
+          back to a local cached index when live results are unavailable.<br /><br />
+
+          The system is deployed through a streamlined multi-tab Streamlit
+          dashboard that supports real-time prediction, transparent model
+          explanations (feature contributions and confidence scores), verified
+          fact-check retrieval, user feedback submission, and performance
+          monitoring through metrics such as confusion matrix, precision,
+          recall, and F1-score. On a held-out validation set, TruthLens achieves
+          approximately 91.5% accuracy with balanced performance across both
+          REAL and FAKE classes. When paired with the fact-checking layer, the
+          system provides high-confidence automated flagging and a
+          human-in-the-loop review path for ambiguous cases.<br /><br />
+
+          TruthLens is built for extensibility, enabling the addition of new
+          fact-check sources, transformer-based embeddings, and active-learning
+          loops. Its modular architecture makes it suitable for integration into
+          media-monitoring pipelines, journalistic verification workflows, and
+          educational tools focused on digital literacy.
+        </p>
+      </div>
+      <!-- Project Objectives -->
+      <div class="mb-8" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          Project Objectives
+        </h2>
+        <ul class="text-gray-700 list-disc pl-5 space-y-2">
+          <li>
+            To develop a lightweight, interpretable ML classifier for detecting
+            misinformation in short-form news text.
+          </li>
+          <li>
+            To integrate fact-checking capabilities using Google Fact Check
+            Tools API with fallback to local cached index.
+          </li>
+          <li>
+            To provide explainable predictions with feature contributions and
+            confidence scores.
+          </li>
+          <li>
+            To build a multi-tab Streamlit dashboard for real-time prediction,
+            model explanations, and performance monitoring.
+          </li>
+          <li>
+            To achieve high accuracy (91.5%) with balanced performance across
+            REAL and FAKE classes.
+          </li>
+          <li>
+            To enable extensibility for new fact-check sources, transformer
+            embeddings, and active-learning loops.
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-8" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Features</h2>
+        <ul class="text-gray-700 space-y-2">
+          <li>
+            <b>ML Classifier:</b> Lightweight, interpretable classifier using
+            TF-IDF word/character n-grams, numeric features, and optional
+            sentence embeddings with Logistic Regression.
+          </li>
+          <li>
+            <b>Fact-Checking Module:</b> Integrates Google Fact Check Tools API
+            with automatic fallback to local cached index for reliable
+            verification.
+          </li>
+          <li>
+            <b>Streamlit Dashboard:</b> Multi-tab interface for real-time
+            prediction, model explanations, fact-check retrieval, user feedback,
+            and performance metrics.
+          </li>
+          <li>
+            <b>Explainable Predictions:</b> Feature contributions, confidence
+            scores, and transparent decision-making for user trust.
+          </li>
+          <li>
+            <b>Performance Monitoring:</b> Confusion matrix, precision, recall,
+            F1-score tracking with 91.5% accuracy on validation set.
+          </li>
+          <li>
+            <b>Modular Architecture:</b> Extensible design for new sources,
+            embeddings, and active-learning loops.
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-8" data-aos="fade-up">
+        <h3 class="font-bold text-gray-800 mb-2">Technologies Used</h3>
+        <div class="flex flex-wrap gap-3">
+          <span
+            class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+            >Python</span
+          >
+          <span
+            class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+            >Streamlit</span
+          >
+          <span
+            class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+            >scikit-learn</span
+          >
+          <span
+            class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+            >pandas</span
+          >
+          <span
+            class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+            >numpy</span
+          >
+          <span
+            class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+            >Google Fact Check Tools API</span
+          >
+        </div>
+      </div>
+
+      <div class="mb-8" data-aos="fade-up">
+        <h3 class="font-bold text-gray-800 mb-2">Planned Enhancements</h3>
+        <ul class="text-gray-700 space-y-2">
+          <li>
+            Integration of additional fact-check sources beyond Google API
+          </li>
+          <li>Transformer-based embeddings for improved text representation</li>
+          <li>Active-learning loops for continuous model improvement</li>
+          <li>Multi-language support for global misinformation detection</li>
+        </ul>
+      </div>
+
+      <div class="mb-8" data-aos="fade-up">
+        <h3 class="font-bold text-gray-800 mb-2">Project Screens</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <img
+            src="images/fnd1.png"
+            alt="TruthLens Dashboard Screenshot"
+            class="rounded-lg shadow border"
+          />
+          <img
+            src="images/fnd2.png"
+            alt="TruthLens Prediction Interface"
+            class="rounded-lg shadow border"
+          />
+          <img
+            src="images/fnd3.png"
+            alt="TruthLens Model Explanations"
+            class="rounded-lg shadow border"
+          />
+          <img
+            src="images/fnd4.png"
+            alt="TruthLens Fact-Check Results"
+            class="rounded-lg shadow border"
+          />
+          <img
+            src="images/fnd5.png"
+            alt="TruthLens Performance Metrics"
+            class="rounded-lg shadow border"
+          />
+          <img
+            src="images/fnd6.png"
+            alt="TruthLens User Feedback Form"
+            class="rounded-lg shadow border"
+          />
+          <img
+            src="images/fnd7.png"
+            alt="TruthLens Confusion Matrix"
+            class="rounded-lg shadow border"
+          />
+          <img
+            src="images/fnd8.png"
+            alt="TruthLens Real-time Analysis"
+            class="rounded-lg shadow border"
+          />
+        </div>
+        <b style="text-align: right" title="click preview">More ...</b>
+      </div>
+    </section>
+
+    <!-- Sticky Buttons -->
+    <div
+      class="sticky text-xs md:text-lg bottom-6 mx-auto transform flex flex-row gap-4 z-40"
+    >
+      <a
+        href="#"
+        class="px-8 py-3 cursor-not-allowed rounded-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold shadow-lg hover:scale-105 transition flex items-center gap-2"
+        title="this is sample. full project under development"
+        aria-disabled="true"
+        title="this project is under development"
+      >
+        <i class="fas fa-eye"></i> Preview
+      </a>
+      <a
+        href="https://wa.me/917904889179?text=Hi%20Sheik,%20I%20want%20to%20know%20more%20about%20TruthLens"
+        target="_blank"
+        class="px-8 py-3 rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold shadow-lg hover:scale-105 transition flex items-center gap-2"
+      >
+        <i class="fab fa-whatsapp"></i> Contact
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mx-auto px-4 bg-gray-900 text-gray-200 py-8 mt-24">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-6 md:mb-0">
+            <h2 class="text-2xl font-bold">Sheik Mohammed Arif</h2>
+            <p class="text-gray-400 mt-2">
+              Creative Web Solutions for Learning & Innovation
+            </p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-blue-400 transition"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" class="hover:text-pink-400 transition"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-blue-600 transition"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="hover:text-gray-100 transition"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+        <hr class="border-gray-800 my-8" />
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2025 TruthLens by Sheik Mohammed Arif. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white text-sm transition-colors"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white text-sm transition-colors"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+    </script>
+  </body>
+</html>
